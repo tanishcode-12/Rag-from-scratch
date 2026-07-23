@@ -40,5 +40,10 @@ def read_and_split_text(filepath: str | Path, min_chars: int = 20) -> List[str]:
 
 
 def _clean(paragraph: str) -> str:
-    # Collapse internal newlines/whitespace so each chunk is one clean line.
+    """
+    Collapse internal newlines and repeated whitespace into single spaces.
+
+    This turns a multi-line paragraph into one clean line, so downstream
+    embedding and display code never has to deal with stray formatting.
+    """
     return " ".join(paragraph.split())
