@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG From Scratch — Retrieval-Grounded vs. Ungrounded Generation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="scope-glow" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">RF</span>
+      <div class="brand-text">
+        <span class="brand-title">RAG&nbsp;From&nbsp;Scratch</span>
+        <span class="brand-sub">retrieval-grounded vs. ungrounded generation</span>
+      </div>
+    </div>
+    <a class="header-link" href="https://github.com/tanishcode-12" target="_blank" rel="noopener">Source on GitHub →</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="intro">
+    <p class="eyebrow">Live demo · built without LangChain</p>
+    <h1>Two answers to every question. Only one of them checked the source material.</h1>
+    <p class="lede">
+      This engine embeds a personal corpus — my certification coursework and projects —
+      into vectors by hand, indexes them with FAISS, and retrieves the nearest passages
+      before generating an answer. Ask a question below and watch the model answer
+      once blind, and once with the retrieved passages in view.
+    </p>
+  </section>
+
+  <section class="controls" aria-label="Query controls">
+    <form id="ask-form">
+      <label class="field-label" for="question">Ask about the coursework or projects</label>
+      <textarea
+        id="question"
+        name="question"
+        rows="2"
+        placeholder="e.g. What does the RAG and LangChain course teach? What is DPR? What did the Aircraft Damage Detection project achieve?"
+        required
+      ></textarea>
+
+      <div class="controls-row">
+        <div class="embedder-toggle" role="radiogroup" aria-label="Embedding backend">
+          <button type="button" class="toggle-btn is-active" data-embedder="bert" role="radio" aria-checked="true">
+            BERT <span class="toggle-sub">mean-pooled</span>
+          </button>
+          <button type="button" class="toggle-btn" data-embedder="dpr" role="radio" aria-checked="false">
+            DPR <span class="toggle-sub">dual-encoder</span>
+          </button>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="submit-label">Run comparison</span>
+          <span class="submit-spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+    <p class="hint" id="form-hint"></p>
+  </section>
+
+  <section class="results" id="results" hidden>
+
+    <div class="results-grid">
+
+      <article class="answer-card answer-card--ungrounded">
+        <div class="card-head">
+          <span class="card-tag">Without retrieval</span>
+          <span class="card-time" id="time-without"></span>
+        </div>
+        <p class="card-desc">Answered from the model's parameters alone. No documents consulted.</p>
+        <div class="card-answer" id="answer-without"></div>
+      </article>
+
+      <article class="answer-card answer-card--grounded">
+        <div class="card-head">
+          <span class="card-tag">With retrieval (RAG)</span>
+          <span class="card-time" id="time-with"></span>
+        </div>
+        <p class="card-desc">Answered after reading the passages retrieved on the right.</p>
+        <div class="card-answer" id="answer-with"></div>
+      </article>
+
+    </div>
+
+    <div class="scope-panel">
+      <div class="scope-head">
+        <span class="scope-title">Retrieval scope</span>
+        <span class="scope-sub" id="scope-embedder-label"></span>
+      </div>
+      <ol class="scope-list" id="scope-list"></ol>
+    </div>
+
+  </section>
+
+  <section class="error-banner" id="error-banner" hidden>
+    <span class="error-title">Couldn't run that one.</span>
+    <span class="error-detail" id="error-detail"></span>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Built by Tanish Shetty — embeddings, FAISS indexing, and generation implemented directly with PyTorch and Hugging Face Transformers, no retrieval framework.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
