@@ -1,0 +1,63 @@
+Introduction to Artificial Intelligence (AI) is the first course in the IBM Generative AI Engineering Professional Certificate. It introduces the fundamental concepts of artificial intelligence, including the difference between narrow AI and general AI, common AI applications in business, and an overview of machine learning versus deep learning. The course sets the foundation for all later courses in the certificate by explaining how AI systems perceive, reason, and act.
+
+Generative AI: Introduction and Applications covers the basics of generative AI, including how models like GPT and diffusion models generate text, images, audio, and code. It explores real-world applications of generative AI across industries such as healthcare, marketing, and software development, and discusses the societal and ethical implications of generative systems.
+
+Generative AI: Prompt Engineering Basics teaches how to design effective prompts to guide large language model behavior. It covers zero-shot prompting, one-shot prompting, few-shot prompting, and the difference between instruction-based prompts and role-based prompts. The course emphasizes how prompt structure directly affects output quality and consistency.
+
+Python for Data Science, AI and Development is a hands-on Python programming course covering data structures, functions, APIs, working with files, and using libraries such as pandas and NumPy. It is designed to give learners the programming foundation needed for the more advanced generative AI and machine learning courses later in the certificate.
+
+Developing AI Applications with Python and Flask teaches how to build and deploy backend web applications that serve AI models. It covers Flask routing, REST API design, request handling, and how to wrap a machine learning or AI model behind an HTTP endpoint so it can be consumed by a front-end application.
+
+Building Generative AI-Powered Applications with Python focuses on integrating large language models into full applications. It covers calling LLM APIs, handling responses, managing conversation state, and combining generative AI outputs with traditional application logic to build usable products.
+
+Data Analysis with Python covers exploratory data analysis, data cleaning, handling missing values, and using pandas, Matplotlib, and NumPy to analyze structured datasets. It builds practical skills for preparing data before feeding it into machine learning or generative AI pipelines.
+
+Machine Learning with Python introduces supervised and unsupervised learning, including regression, classification, clustering, and model evaluation metrics such as accuracy, precision, recall, and F1-score. It uses scikit-learn to build and evaluate classical machine learning models.
+
+Introduction to Deep Learning and Neural Networks with Keras covers the architecture of artificial neural networks, including layers, activation functions, backpropagation, and optimization. It introduces Keras as a high-level framework for building and training deep learning models such as convolutional neural networks.
+
+Generative AI and LLMs: Architecture and Data Preparation explains the internal architecture of large language models, including embeddings, tokenization, and the data pipelines used to prepare text corpora for training. It covers how raw text is cleaned, tokenized, and converted into numerical representations before being fed into a transformer model.
+
+Gen AI Foundational Models for NLP and Language Understanding covers foundational natural language processing models, including word embeddings such as Word2Vec, contextual embeddings such as those from BERT, and how these representations are used for tasks like sentiment analysis and named entity recognition.
+
+Generative AI Language Modeling with Transformers dives into the transformer architecture itself, including self-attention, multi-head attention, positional encoding, and the encoder-decoder structure. It explains why transformers replaced recurrent neural networks as the dominant architecture for language modeling.
+
+Generative AI Engineering and Fine-Tuning Transformers teaches how to adapt a pretrained transformer model to a specific downstream task through fine-tuning. It covers techniques such as full fine-tuning, freezing layers, and preparing labeled datasets for supervised fine-tuning of models like BERT and GPT.
+
+Generative AI Advanced Fine-Tuning for LLMs covers more advanced and efficient fine-tuning techniques such as LoRA (Low-Rank Adaptation), parameter-efficient fine-tuning (PEFT), and instruction tuning. It explains how these techniques reduce the computational cost of adapting large models compared to full fine-tuning.
+
+Fundamentals of AI Agents Using RAG and LangChain is the course that ties retrieval-augmented generation together with agent-based reasoning. It covers how an AI agent can decide between multiple tools, when to retrieve external documents versus answering directly, and how to give a language model memory across a conversation using the LangChain framework.
+
+Project: Generative AI Applications with RAG and LangChain is the capstone project of the certificate. Learners build a complete retrieval-augmented generation application using LangChain, including document loaders, text splitters, vector stores, and a question-answering chain connected to a large language model.
+
+The IBM RAG and Agentic AI Professional Certificate is a separate, more advanced IBM certification focused specifically on retrieval-augmented generation and agentic AI systems, covering how autonomous agents plan, use tools, and retrieve external knowledge to complete multi-step tasks.
+
+The IBM Deep Learning with PyTorch, Keras, and TensorFlow certificate covers building and training neural networks across three major deep learning frameworks. It includes convolutional neural networks for computer vision, recurrent architectures for sequence data, and comparisons of the developer experience across PyTorch, Keras, and TensorFlow.
+
+The Meta Database Engineer Professional Certificate covers relational database design, SQL querying, normalization, indexing, and database administration. It focuses on the skills needed to design and manage databases that could serve as the data layer behind an AI application.
+
+The Microsoft Power BI Data Analyst Professional Certificate covers building interactive dashboards, DAX measures, Power Query transformations, and data modeling using a star schema. It focuses on turning raw business data into visual, actionable insights.
+
+The Google Cybersecurity Professional Certificate covers network security fundamentals, threat detection, incident response, and security frameworks such as the CIA triad (confidentiality, integrity, availability). It introduces the mindset needed to secure systems, including AI systems, against common attack vectors.
+
+Model Context Protocol: Introduction and Advanced Topics, offered by Anthropic through Coursera, covers MCP, a standard that allows AI models like Claude to connect to external tools and data sources in a consistent way. It explains how MCP servers expose tools and resources that an AI model can call during a conversation.
+
+Sales Analysis with Claude: Data-Driven Sales Analytics is a Coursera course that teaches how to use the Claude API to analyze sales data, generate insights, and automate parts of a sales analytics workflow using a large language model as an analytical assistant.
+
+JobGenie is a Flask-based resume parser and job recommender built by the certificate holder. It uses pdfplumber to extract text from PDF resumes, automatically detects the candidate's professional domain, scores resumes against target job descriptions using an ATS-style scoring system, and recommends ranked job matches using a custom Jaccard similarity and coverage scoring algorithm.
+
+Escanor is an offline AI-powered virtual assistant built entirely in Python without relying on any external APIs. It combines voice recognition, text-to-speech, real-time system monitoring, TF-IDF and Naive Bayes based fake news detection, OCR text extraction, Wikipedia search, and language translation into a single offline pipeline.
+
+StockSense is a four-page Power BI dashboard that combines stock market and sales data using star schema modeling. It includes DAX measures for year-over-year growth, a thirty-day moving average, volatility, and customer lifetime value, along with drill-through pages and bookmarks for interactive exploration.
+
+CarIQ is a Streamlit application that predicts used car prices using a Random Forest Regressor trained on over 1,500 listings. It includes eight interactive Plotly charts and a radar-chart comparator that lets users compare multiple cars side by side.
+
+The Dynamic Parking Pricing System was built during the IIT Guwahati Hackathon. It implements three progressively more sophisticated pricing models: a linear model, a demand-based model, and a geospatial-competitive model that uses the geopy library to map nearby competitor pricing, visualized using Bokeh.
+
+Aircraft Damage Detection is a computer vision project that uses a convolutional neural network built with TensorFlow and Keras to classify aircraft damage from images. The full preprocessing pipeline achieved 87 percent training accuracy, 68.8 percent validation accuracy, and 76.0 percent test accuracy.
+
+Retrieval-Augmented Generation, commonly abbreviated as RAG, is a technique that improves the factual accuracy of large language model outputs by first retrieving relevant documents from an external knowledge source and then conditioning the model's generated answer on those retrieved documents, rather than relying purely on what the model memorized during training.
+
+FAISS, which stands for Facebook AI Similarity Search, is a library for efficient similarity search and clustering of dense vectors. It is commonly used as the vector index in RAG systems to quickly find the nearest neighbor embeddings to a given query embedding, even across millions of documents.
+
+Dense Passage Retrieval, or DPR, uses two separate BERT-based encoders, a context encoder and a question encoder, to map passages and questions into the same embedding space. Retrieval is then performed by finding the passage embeddings that are closest to a given question embedding, typically measured using dot product similarity or L2 distance.
