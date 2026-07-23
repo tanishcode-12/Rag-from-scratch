@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# Cached FAISS indexes & embeddings -- regenerated automatically on first
+# run per embedder backend, so they don't need to be committed.
+cache/*.faiss
+cache/*.meta.json
+
+.pytest_cache/
+.DS_Store
+*.egg-info/
